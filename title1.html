@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bank Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .login-form, .account-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .login-form input, .account-actions button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-form button, .account-actions button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-form button:hover, .account-actions button:hover {
+            background-color: #2ecc71;
+        }
+
+        .account-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .account-info div {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            width: 48%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Bank Management System</h1>
+    </header>
+    
+    <div class="container">
+        <h1>Login</h1>
+        <form class="login-form">
+            <input type="text" placeholder="User ID" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="container" style="display:none;">
+        <div class="account-info">
+            <div>
+                <h3>Account Balance</h3>
+                <p>$5,000.00</p>
+            </div>
+            <div>
+                <h3>Account Number</h3>
+                <p>1234567890</p>
+            </div>
+        </div>
+        
+        <div class="account-actions">
+            <button>Check Balance</button>
+            <button>Deposit Money</button>
+            <button>Withdraw Money</button>
+            <button onclick="window.location.href='transactions.html';">View Transactions</button>
+            <button>Logout</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History - Online Bank Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Transaction History</h1>
+    </header>
+    
+    <div class="container">
+        <h1>Recent Transactions</h1>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Balance</th>
+            </tr>
+            <tr>
+                <td>2024-08-25</td>
+                <td>Deposit</td>
+                <td>+ $1,000.00</td>
+                <td>$5,000.00</td>
+            </tr>
+            <tr>
+                <td>2024-08-20</td>
+                <td>Withdrawal</td>
+                <td>- $500.00</td>
+                <td>$4,000.00</td>
+            </tr>
+            <tr>
+                <td>2024-08-15</td>
+                <td>Deposit</td>
+                <td>+ $2,000.00</td>
+                <td>$4,500.00</td>
+            </tr>
+        </table>
+
+        <div class="back-button" onclick="window.location.href='index.html';">Back to Account</div>
+    </div>
+</body>
+</html>
